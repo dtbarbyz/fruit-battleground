@@ -106,7 +106,7 @@ button.TextWrapped = true
 
 -- Scripts:
 
-local function NMAHXWO_fake_script() -- tptoolbutton.LocalScript 
+local function ODHOJGO_fake_script() -- tptoolbutton.LocalScript 
 	local script = Instance.new('LocalScript', tptoolbutton)
 
 	local Frame = script.Parent.Parent.Frame
@@ -124,8 +124,8 @@ local function NMAHXWO_fake_script() -- tptoolbutton.LocalScript
 		tool.Parent = game.Players.LocalPlayer.Backpack
 	end)
 end
-coroutine.wrap(NMAHXWO_fake_script)()
-local function NNVE_fake_script() -- closeuibutton.LocalScript 
+coroutine.wrap(ODHOJGO_fake_script)()
+local function JLBRYIG_fake_script() -- closeuibutton.LocalScript 
 	local script = Instance.new('LocalScript', closeuibutton)
 
 	local NiceFrame = script.Parent.Parent
@@ -134,8 +134,8 @@ local function NNVE_fake_script() -- closeuibutton.LocalScript
 		NiceFrame.Visible = false
 	end)
 end
-coroutine.wrap(NNVE_fake_script)()
-local function BVEMP_fake_script() -- speedhackandjump.LocalScript 
+coroutine.wrap(JLBRYIG_fake_script)()
+local function KYHC_fake_script() -- speedhackandjump.LocalScript 
 	local script = Instance.new('LocalScript', speedhackandjump)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -143,8 +143,8 @@ local function BVEMP_fake_script() -- speedhackandjump.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
 	end)
 end
-coroutine.wrap(BVEMP_fake_script)()
-local function NTPFO_fake_script() -- anticheats.LocalScript 
+coroutine.wrap(KYHC_fake_script)()
+local function OYJCLMI_fake_script() -- anticheats.LocalScript 
 	local script = Instance.new('LocalScript', anticheats)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -152,49 +152,49 @@ local function NTPFO_fake_script() -- anticheats.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 	end)
 end
-coroutine.wrap(NTPFO_fake_script)()
-local function RXUGR_fake_script() -- autofarmbutton.LocalScript 
+coroutine.wrap(OYJCLMI_fake_script)()
+local function YFJUPA_fake_script() -- autofarmbutton.LocalScript 
 	local script = Instance.new('LocalScript', autofarmbutton)
 
-if game.PlaceId ~= 9224601490 or shared.FruitBattlegrounds then return end;
-
-shared.FruitBattlegrounds = true;
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage");
-local Players = game:GetService("Players");
-local LocalPlayer = Players.LocalPlayer;
-local PlayerGui = LocalPlayer.PlayerGui;
-
-local MainData = LocalPlayer:WaitForChild("MAIN_DATA")
-local CurrentData = MainData:WaitForChild("Fruits"):WaitForChild(MainData:WaitForChild("Slots")[MainData:WaitForChild("Slot").Value].Value);
-
-local FruitMoves = {};
-
-while shared.FruitBattlegrounds do
-	wait(0.25);
-
-	if PlayerGui:FindFirstChild("UI") and not PlayerGui.UI.HUD.Visible then return end;
-	if LocalPlayer.Character.Stats:GetAttribute("Stamina") <= 50 then return end;
-
-	if #FruitMoves == 0 then
-		for i,v in pairs(LocalPlayer.Backpack:GetChildren()) do
-			if v.ClassName == "Tool" and CurrentData.Level.Value >= v:GetAttribute("Level") then
-				FruitMoves[#FruitMoves + 1] = string.gsub(v.Name, " ", "");
+	if game.PlaceId ~= 9224601490 or shared.FruitBattlegrounds then return end;
+	
+	shared.FruitBattlegrounds = true;
+	
+	local ReplicatedStorage = game:GetService("ReplicatedStorage");
+	local Players = game:GetService("Players");
+	local LocalPlayer = Players.LocalPlayer;
+	local PlayerGui = LocalPlayer.PlayerGui;
+	
+	local MainData = LocalPlayer:WaitForChild("MAIN_DATA")
+	local CurrentData = MainData:WaitForChild("Fruits"):WaitForChild(MainData:WaitForChild("Slots")[MainData:WaitForChild("Slot").Value].Value);
+	
+	local FruitMoves = {};
+	
+	while shared.FruitBattlegrounds do
+		wait(0.25);
+	
+		if PlayerGui:FindFirstChild("UI") and not PlayerGui.UI.HUD.Visible then return end;
+		if LocalPlayer.Character.Stats:GetAttribute("Stamina") <= 50 then return end;
+	
+		if #FruitMoves == 0 then
+			for i,v in pairs(LocalPlayer.Backpack:GetChildren()) do
+				if v.ClassName == "Tool" and CurrentData.Level.Value >= v:GetAttribute("Level") then
+					FruitMoves[#FruitMoves + 1] = string.gsub(v.Name, " ", "");
+				end
+			end
+		else
+			LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1317.05322, 696.182251, -985.855286, -0.608514786, 4.99603416e-08, -0.793542504, -1.55696291e-08, 1, 7.48979332e-08, 0.793542504, 5.79316612e-08, -0.608514786);
+	
+			for i,v in pairs(FruitMoves) do
+				if not LocalPlayer.Cooldowns:FindFirstChild(v) then
+					ReplicatedStorage.Replicator:InvokeServer(CurrentData.Name, v, {});
+				end
 			end
 		end
-	else
-		LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1317.05322, 696.182251, -985.855286, -0.608514786, 4.99603416e-08, -0.793542504, -1.55696291e-08, 1, 7.48979332e-08, 0.793542504, 5.79316612e-08, -0.608514786);
-
-		for i,v in pairs(FruitMoves) do
-			if not LocalPlayer.Cooldowns:FindFirstChild(v) then
-				ReplicatedStorage.Replicator:InvokeServer(CurrentData.Name, v, {});
-			end
-		end
-	end
-end;
+	end;
 end
-coroutine.wrap(RXUGR_fake_script)()
-local function BGGRWYR_fake_script() -- button.LocalScript 
+coroutine.wrap(YFJUPA_fake_script)()
+local function PRPZXO_fake_script() -- button.LocalScript 
 	local script = Instance.new('LocalScript', button)
 
 	local NiceFrame = script.Parent.Parent.NiceFrame
@@ -203,4 +203,4 @@ local function BGGRWYR_fake_script() -- button.LocalScript
 		NiceFrame.Visible = true
 	end)
 end
-coroutine.wrap(BGGRWYR_fake_script)()
+coroutine.wrap(PRPZXO_fake_script)()
