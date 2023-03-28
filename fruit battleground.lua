@@ -42,6 +42,14 @@ tptoolbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 tptoolbutton.Position = UDim2.new(-0.0347312726, 0, 0.0490658022, 0)
 tptoolbutton.Size = UDim2.new(0, 52, 0, 50)
 tptoolbutton.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+closeuibutton.Font = Enum.Font.SourceSans
+closeuibutton.Text = "X"
+closeuibutton.TextColor3 = Color3.fromRGB(255, 0, 0)
+closeuibutton.TextScaled = true
+closeuibutton.TextSize = 14.000
+closeuibutton.TextWrapped = true
+
+speedhackandjump.Name = "speedhackandjump"
 tptoolbutton.Font = Enum.Font.SourceSans
 tptoolbutton.Text = "tp tool"
 tptoolbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -52,14 +60,6 @@ closeuibutton.Parent = NiceFrame
 closeuibutton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 closeuibutton.Position = UDim2.new(0.878839433, 0, 0.0414899029, 0)
 closeuibutton.Size = UDim2.new(0, 34, 0, 28)
-closeuibutton.Font = Enum.Font.SourceSans
-closeuibutton.Text = "X"
-closeuibutton.TextColor3 = Color3.fromRGB(255, 0, 0)
-closeuibutton.TextScaled = true
-closeuibutton.TextSize = 14.000
-closeuibutton.TextWrapped = true
-
-speedhackandjump.Name = "speedhackandjump"
 speedhackandjump.Parent = NiceFrame
 speedhackandjump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 speedhackandjump.Position = UDim2.new(0.180144757, 0, 0.0490658022, 0)
@@ -108,7 +108,7 @@ button.TextWrapped = true
 
 -- Scripts:
 
-local function QIXNBG_fake_script() -- tptoolbutton.LocalScript 
+local function MYMQC_fake_script() -- tptoolbutton.LocalScript 
 	local script = Instance.new('LocalScript', tptoolbutton)
 
 	local Frame = script.Parent.Parent.Frame
@@ -126,8 +126,8 @@ local function QIXNBG_fake_script() -- tptoolbutton.LocalScript
 		tool.Parent = game.Players.LocalPlayer.Backpack
 	end)
 end
-coroutine.wrap(QIXNBG_fake_script)()
-local function GDSG_fake_script() -- closeuibutton.LocalScript 
+coroutine.wrap(MYMQC_fake_script)()
+local function FZKUCT_fake_script() -- closeuibutton.LocalScript 
 	local script = Instance.new('LocalScript', closeuibutton)
 
 	local NiceFrame = script.Parent.Parent
@@ -136,8 +136,8 @@ local function GDSG_fake_script() -- closeuibutton.LocalScript
 		NiceFrame.Visible = false
 	end)
 end
-coroutine.wrap(GDSG_fake_script)()
-local function JUUQ_fake_script() -- speedhackandjump.LocalScript 
+coroutine.wrap(FZKUCT_fake_script)()
+local function QCNHD_fake_script() -- speedhackandjump.LocalScript 
 	local script = Instance.new('LocalScript', speedhackandjump)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -145,8 +145,8 @@ local function JUUQ_fake_script() -- speedhackandjump.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
 	end)
 end
-coroutine.wrap(JUUQ_fake_script)()
-local function RGNQZ_fake_script() -- anticheats.LocalScript 
+coroutine.wrap(QCNHD_fake_script)()
+local function JEGGP_fake_script() -- anticheats.LocalScript 
 	local script = Instance.new('LocalScript', anticheats)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -154,27 +154,27 @@ local function RGNQZ_fake_script() -- anticheats.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 	end)
 end
-coroutine.wrap(RGNQZ_fake_script)()
-local function FRHC_fake_script() -- autofarmbutton.LocalScript 
+coroutine.wrap(JEGGP_fake_script)()
+local function SYCMWUH_fake_script() -- autofarmbutton.LocalScript 
 	local script = Instance.new('LocalScript', autofarmbutton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		
-	if game.PlaceId ~= 9224601490 or shared.FruitBattlegrounds then return end;
+		if game.PlaceId ~= 9224601490 or shared.FruitBattlegrounds then return end;
 	
-	shared.FruitBattlegrounds = true;
+		shared.FruitBattlegrounds = true;
 	
-	local ReplicatedStorage = game:GetService("ReplicatedStorage");
-	local Players = game:GetService("Players");
-	local LocalPlayer = Players.LocalPlayer;
-	local PlayerGui = LocalPlayer.PlayerGui;
+		local ReplicatedStorage = game:GetService("ReplicatedStorage");
+		local Players = game:GetService("Players");
+		local LocalPlayer = Players.LocalPlayer;
+		local PlayerGui = LocalPlayer.PlayerGui;
 	
-	local MainData = LocalPlayer:WaitForChild("MAIN_DATA")
-	local CurrentData = MainData:WaitForChild("Fruits"):WaitForChild(MainData:WaitForChild("Slots")[MainData:WaitForChild("Slot").Value].Value);
+		local MainData = LocalPlayer:WaitForChild("MAIN_DATA")
+		local CurrentData = MainData:WaitForChild("Fruits"):WaitForChild(MainData:WaitForChild("Slots")[MainData:WaitForChild("Slot").Value].Value);
 	
-	local FruitMoves = {};
+		local FruitMoves = {};
 	
-	while shared.FruitBattlegrounds do
+		while shared.FruitBattlegrounds do
 		wait(0.25);
 	
 		if PlayerGui:FindFirstChild("UI") and not PlayerGui.UI.HUD.Visible then return end;
@@ -195,11 +195,11 @@ local function FRHC_fake_script() -- autofarmbutton.LocalScript
 				end
 			end
 		end
-	end;
+	  end;
 	end)
 end
-coroutine.wrap(FRHC_fake_script)()
-local function KQWFRMV_fake_script() -- button.LocalScript 
+coroutine.wrap(SYCMWUH_fake_script)()
+local function OCHTAMZ_fake_script() -- button.LocalScript 
 	local script = Instance.new('LocalScript', button)
 
 	local NiceFrame = script.Parent.Parent.NiceFrame
@@ -208,4 +208,4 @@ local function KQWFRMV_fake_script() -- button.LocalScript
 		NiceFrame.Visible = true
 	end)
 end
-coroutine.wrap(KQWFRMV_fake_script)()
+coroutine.wrap(OCHTAMZ_fake_script)()
