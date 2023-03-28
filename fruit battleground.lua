@@ -1,5 +1,7 @@
---MADE BY ARBYZ KARAPYZ HUB
---DISCORD SERVER https://discord.gg/ZnMDuvWAUM
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
 local NiceFrame = Instance.new("Frame")
@@ -106,7 +108,7 @@ button.TextWrapped = true
 
 -- Scripts:
 
-local function ODHOJGO_fake_script() -- tptoolbutton.LocalScript 
+local function QIXNBG_fake_script() -- tptoolbutton.LocalScript 
 	local script = Instance.new('LocalScript', tptoolbutton)
 
 	local Frame = script.Parent.Parent.Frame
@@ -124,8 +126,8 @@ local function ODHOJGO_fake_script() -- tptoolbutton.LocalScript
 		tool.Parent = game.Players.LocalPlayer.Backpack
 	end)
 end
-coroutine.wrap(ODHOJGO_fake_script)()
-local function JLBRYIG_fake_script() -- closeuibutton.LocalScript 
+coroutine.wrap(QIXNBG_fake_script)()
+local function GDSG_fake_script() -- closeuibutton.LocalScript 
 	local script = Instance.new('LocalScript', closeuibutton)
 
 	local NiceFrame = script.Parent.Parent
@@ -134,8 +136,8 @@ local function JLBRYIG_fake_script() -- closeuibutton.LocalScript
 		NiceFrame.Visible = false
 	end)
 end
-coroutine.wrap(JLBRYIG_fake_script)()
-local function KYHC_fake_script() -- speedhackandjump.LocalScript 
+coroutine.wrap(GDSG_fake_script)()
+local function JUUQ_fake_script() -- speedhackandjump.LocalScript 
 	local script = Instance.new('LocalScript', speedhackandjump)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -143,8 +145,8 @@ local function KYHC_fake_script() -- speedhackandjump.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
 	end)
 end
-coroutine.wrap(KYHC_fake_script)()
-local function OYJCLMI_fake_script() -- anticheats.LocalScript 
+coroutine.wrap(JUUQ_fake_script)()
+local function RGNQZ_fake_script() -- anticheats.LocalScript 
 	local script = Instance.new('LocalScript', anticheats)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -152,10 +154,12 @@ local function OYJCLMI_fake_script() -- anticheats.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 	end)
 end
-coroutine.wrap(OYJCLMI_fake_script)()
-local function YFJUPA_fake_script() -- autofarmbutton.LocalScript 
+coroutine.wrap(RGNQZ_fake_script)()
+local function FRHC_fake_script() -- autofarmbutton.LocalScript 
 	local script = Instance.new('LocalScript', autofarmbutton)
 
+	script.Parent.MouseButton1Click:Connect(function()
+		
 	if game.PlaceId ~= 9224601490 or shared.FruitBattlegrounds then return end;
 	
 	shared.FruitBattlegrounds = true;
@@ -192,9 +196,10 @@ local function YFJUPA_fake_script() -- autofarmbutton.LocalScript
 			end
 		end
 	end;
+	end)
 end
-coroutine.wrap(YFJUPA_fake_script)()
-local function PRPZXO_fake_script() -- button.LocalScript 
+coroutine.wrap(FRHC_fake_script)()
+local function KQWFRMV_fake_script() -- button.LocalScript 
 	local script = Instance.new('LocalScript', button)
 
 	local NiceFrame = script.Parent.Parent.NiceFrame
@@ -203,4 +208,4 @@ local function PRPZXO_fake_script() -- button.LocalScript
 		NiceFrame.Visible = true
 	end)
 end
-coroutine.wrap(PRPZXO_fake_script)()
+coroutine.wrap(KQWFRMV_fake_script)()
